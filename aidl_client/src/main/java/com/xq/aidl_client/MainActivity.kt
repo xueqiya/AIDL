@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
+import com.xq.aidl_server.Book
+import com.xq.aidl_server.IBookManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -51,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 sb.append("{" + book.bookId + "}," + "{" + book.bookName + "}\n")
             }
             text.text = sb.toString()
-            text.text = "asd"
         }
     }
 
@@ -63,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE)
     }
 
-    var mServiceConnection: ServiceConnection = object : ServiceConnection {
+    private var mServiceConnection: ServiceConnection = object : ServiceConnection {
         override fun onServiceDisconnected(name: ComponentName?) {
             Log.i(TAG, "service disconnected")
             mBound = false

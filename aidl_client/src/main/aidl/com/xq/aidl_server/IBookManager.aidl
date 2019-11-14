@@ -1,7 +1,8 @@
 // IBookManager.aidl
-package com.xq.aidl_client;
+package com.xq.aidl_server;
 
-import com.xq.aidl_client.Book;
+import com.xq.aidl_server.Book;
+import java.util.List;
 // Declare any non-default types here with import statements
 
 interface IBookManager {

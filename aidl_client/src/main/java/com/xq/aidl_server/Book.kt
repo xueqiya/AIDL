@@ -1,4 +1,4 @@
-package com.xq.aidl_client
+package com.xq.aidl_server
 
 import android.os.Parcel
 import android.os.Parcelable

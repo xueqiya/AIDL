@@ -12,7 +12,13 @@
         <service
             android:name=".AIDLService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:process=":remote"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.xq.aidl_server.AIDLService" />
+            </intent-filter>
+        </service>
 
         <activity android:name=".MainActivity">
             <intent-filter>

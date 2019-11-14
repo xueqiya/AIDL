@@ -24,6 +24,7 @@
 
     <TextView
         android:id="@+id/text"
+        android:text="我是文字"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
